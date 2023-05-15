@@ -1,0 +1,6 @@
+REM Disk Cleanup
+DELAY 500
+GUI r
+STRING c:\windows\SYSTEM32\cleanmgr.exe /CDrive
+DELAY 25
+ENTER

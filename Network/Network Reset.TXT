@@ -1,0 +1,28 @@
+REM Network Reset
+DELAY 500
+GUI r
+DELAY 500
+STRING POWERSHELL
+DELAY 25
+CTRL-SHIFT ENTER
+DELAY 500
+LEFT
+DELAY 5
+ENTER
+DELAY 500
+STRING netsh winsock show catalog > winsock-before.txt
+DELAY 25
+ENTER
+DELAY 125
+STRING netsh winsock reset
+DELAY 25
+ENTER
+DELAY 125
+STRING netsh winsock show catalog > winsock-after.txt
+DELAY 25
+ENTER
+ALT-F4
+DELAY 50
+GUI r
+STRING open c\users
+ENTER
